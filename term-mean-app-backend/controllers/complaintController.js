@@ -2,7 +2,7 @@ const express = require('express');
 var router = express.Router();
 var ObjectId = require('mongoose').Types.ObjectId;
 
-var { Complaint } = require('../models/Complaint');
+var { Complaint } = require('../models/complaints');
 
 // => localhost:3000/Complaints/
 router.get('/', (req, res) => {
