@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { LoginpageComponent } from './loginpage/loginpage.component';
-
+import { LoginComponent } from './login/login.component';
+import { UserService } from './services/user.service';
+import { SignupComponent } from './signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginpageComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
