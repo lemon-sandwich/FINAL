@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complaints</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <link href="login.component.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.7.2/css/all.css"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <!--here ng if check whether the user is maker or receiver and according to it show that it show that particular div -->
+                <div *ngIf="show; else elseBlock">
+                    <h1>Maker</h1>
+                    <div class="row">
+                        <div class="col">
+                            <div ngbDropdown class="d-inline-block">
+                                <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Departments</button>
+                                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                    <button ngbDropdownItem>FCSE Dept</button>
+                                    <button ngbDropdownItem>FES Dept</button>
+                                    <button ngbDropdownItem>FEE Dept</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-template #elseBlock>
+                        <p><br>
+                            <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+                FCSE Complaints
+              </button>
+                        </p>
+                        <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+                            <div class="card">
+                                <div class="card-body">
+                                    Pc from 1800s with almost no ram
+                                </div>
+                                <div class="card-body">
+                                    Very slow computers
+                                </div>
+                                <div class="card-body">
+                                    Chairs broken
+                                </div>
+                            </div>
+                        </div>
+                        <p><br>
+                            <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+                FES Complaints
+              </button>
+                        </p>
+                        <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+                            <div class="card">
+                                <div class="card-body">
+                                    Almost no equipment
+                                </div>
+                                <div class="card-body">
+                                    teaching staff not good
+                                </div>
+                                <div class="card-body">
+                                    building rennovation needed
+                                </div>
+                            </div>
+                        </div>
+                        <p><br>
+                            <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+                FEE Complaints
+              </button>
+                        </p>
+                        <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+                            <div class="card">
+                                <div class="card-body">
+                                    Equipment issue
+                                </div>
+                                <div class="card-body">
+                                    Power off Issue
+                                </div>
+                                <div class="card-body">
+                                    Wires broken
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
