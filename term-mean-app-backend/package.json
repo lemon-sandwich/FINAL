@@ -4,14 +4,16 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "npm run development"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "body-parser": "^1.18.2",
-        "cors": "^2.8.4",
-        "express": "^4.16.3",
-        "mongoose": "^5.0.16"
+        "body-parser": "^1.20.0",
+        "cors": "^2.8.5",
+        "express": "^4.18.1",
+        "mongoose": "^5.13.14",
+        "nodemon": "^2.0.16"
     }
 }
